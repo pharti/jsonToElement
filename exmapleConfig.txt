@@ -1,0 +1,149 @@
+//LOGIN FORM
+
+ {
+        type: 'div',
+        id: 'container-div',
+        class: 'container-class',
+        attributes: {},
+        styles: { padding: 8 },
+        children: [
+          {
+            type: 'h6',
+            id: 'para',
+            class: 'para-class',
+            attributes: {
+              paddingBottom: 8,
+            },
+            value: 'Login Form',
+          },
+          {
+            type: 'p',
+            id: 'para',
+            class: 'para-class',
+            attributes: {},
+            value: 'Username',
+          },
+          {
+            type: 'input',
+            onTextChange: (text) => _setUsername(text),
+          },
+          {
+            type: 'p',
+            id: 'para',
+            attributes: {
+              marginTop: 4
+            },
+            class: 'para-class',
+            value: 'Password',
+          },
+          {
+            type: 'input',
+            onTextChange: (text) => _setPassword(text),
+          },
+          {
+            type: 'button',
+            attributes: {
+              marginTop: 8
+            },
+            style: {},
+            onPress: () => _onSubmit(),
+          }
+        ]
+ }
+
+
+       // {
+      //   type: 'radioGroup',
+      //   onPress: (value) => console.log(value),
+      //   children: [
+      //     {
+      //       type: 'checkBox',
+      //       attributes: {
+      //         value: 'Hello',
+      //       },
+      //       children: [{
+      //         type: 'Text',
+      //         content: 'CheckBox'
+      //       }]
+      //     },
+      //     {
+      //       type: 'radio',
+      //       value: 1,
+      //       children: [
+      //         {
+      //           type: 'Element',
+      //           tagName: 'p',
+      //           attributes: {},
+      //           children: [
+      //             {
+      //               type: 'Text',
+      //               content: 'Radio 1',
+      //             },
+      //           ],
+      //         },
+      //       ]
+      //     },
+      //     {
+      //       type: 'radio',
+      //       value: 2,
+      //       children: [
+      //         {
+      //           type: 'Element',
+      //           tagName: 'p',
+      //           attributes: {},
+      //           children: [
+      //             {
+      //               type: 'Text',
+      //               content: 'Radio 2',
+      //             },
+      //           ],
+      //         },]
+      //     },]
+      // },
+      {
+        type: 'touchable',
+        attributes: {
+          activityOpacity: 0
+        },
+        onPress: () => setOpen(!open), // Set state to open or close accordion
+        children: [
+          {
+            type: 'div',
+            styles: {
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            },
+            children: [
+              {
+                type: 'p',
+                children: [
+                  {
+                    type: 'Text',
+                    content: 'Accordion Title',
+                  }
+                ]
+              },
+              {
+                type: 'icon',
+                color: 'black',
+                attributes: {},
+                name: open ? "keyboard-arrow-up" : "keyboard-arrow-down", // Toggle state base on open state
+                as: Icon
+              },
+            ]
+          },
+          {
+            type: 'p',
+            styles: {
+              display: open ? 'flex' : 'none'
+            },
+            children: [
+              {
+                type: 'Text',
+                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+              }
+            ]
+          }
+        ]
+      }
