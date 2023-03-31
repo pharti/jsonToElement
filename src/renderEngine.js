@@ -79,7 +79,7 @@ const elementCreatorForMobile = config => {
 //... Iterate over each child element and calls the element creator function.
 const webRenderEngine = rootConfig => {
     /**
-          rootConfig is an object which includes the information 
+          rootConfig is an object which includes the information
           for creating a UI Element.
       */
     return rootConfig?.children?.map(c => elementCreatorForWeb(c));
@@ -88,7 +88,7 @@ const webRenderEngine = rootConfig => {
 //... Iterate over each child element and calls the element creator function.
 const mobileRenderEngine = rootConfig => {
     /**
-          rootConfig is an object which includes the information 
+          rootConfig is an object which includes the information
           for creating a UI Element.
       */
     return rootConfig?.children?.map(c => elementCreatorForMobile(c));

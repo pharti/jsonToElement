@@ -1,15 +1,15 @@
 /* eslint-disable prettier/prettier */
-import { ComponentToFontSizeMap } from "../mapper/fontStyleMapper";
+import { ComponentToFontSizeMap } from '../mapper/fontStyleMapper';
 
 export const getH2Config = (config) => {
-    //... config parameter is used when the default configuration are needed to override 
+    //... config parameter is used when the default configuration are needed to override
     let defaultH2Config = {
         type: 'Element',
         tagName: 'h2',
         attributes: {
-            fontSize: ComponentToFontSizeMap['h2'],
+            fontSize: ComponentToFontSizeMap.h2,
         },
-        children: config?.children && config?.children.length > 0 ? [...config?.children] : []
+        children: config?.children && config?.children.length > 0 ? [...config?.children] : [],
     };
 
 
@@ -20,11 +20,11 @@ export const getH2Config = (config) => {
         } else if (key === 'styles') {
             //... native base accepts style prop for styling
             //... Note styles used double braces.. But object doesn't accept double braces as value.
-            defaultH2Config['attributes'] = { ...defaultH2Config['attributes'], ...config[key] };
-            defaultH2Config.style = { ...config.styles }
+            defaultH2Config.attributes = { ...defaultH2Config.attributes, ...config[key] };
+            defaultH2Config.style = { ...config.styles };
         } else {
             defaultH2Config[key] = config[key];
         }
     });
     return defaultH2Config;
-}
+};

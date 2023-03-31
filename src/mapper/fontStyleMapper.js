@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 //... Maps native base font size standards to HTML tags
 export const ComponentToFontSizeMap = {
     small: 'xs',
@@ -9,13 +10,13 @@ export const ComponentToFontSizeMap = {
     h4: '3xl',
     h5: '2xl',
     h6: 'xl',
-    time: 'sm'
+    time: 'sm',
 };
 
 //... Maps native base font style standards to HTML tags
 export const ComponentToFontStyleMap = {
     i: 'italic',
-    em: 'italic'
+    em: 'italic',
 };
 
 //... Maps native base font weight standards to HTML tags

@@ -56,6 +56,7 @@ function App() {
                   paddingTop: 8,
                   borderRadius: 4,
                   width: '100%',
+                  height: 'auto'
                 },
                 src: 'https://cdn-us1.staffbase.com/production/image/upload/c_blurpad,w_1000,h_563,b_rgb:ffffff/v1513267967/Gf9OQfjMlHwzzMbZTrSPmWroZNQYt65b5Cll78bk0FhxI35s0aKOJwSOcCO3DDBaAfvM2iUAr09MnRipbBzMFFKIJH5kN9Y1tAFMOsJcKBHeZXuQk9atXV4Ybdn0WoDjkKuF3lGbc5AEg1Tnep0zU88iRyRTu1AT89a7a1JN80CRCts7yt4kuZWhmNNbTqd8/u59e909dee4b0a0cebc9ed619/nba-all-star-2021-indy.jpeg',
               },
@@ -148,8 +149,8 @@ function App() {
     <NativeBaseProvider>
       <SafeAreaView>
         <ScrollView contentContainerStyle={{}}>
-          {Platform.OS == 'web' && webRenderEngine(testConfig)}
-          {(Platform.OS == 'ios' || Platform.OS == 'android') && mobileRenderEngine(testConfig)}
+          {Platform.OS === 'web' && webRenderEngine(testConfig)}
+          {(Platform.OS === 'ios' || Platform.OS === 'android') && mobileRenderEngine(testConfig)}
         </ScrollView>
       </SafeAreaView>
     </NativeBaseProvider>

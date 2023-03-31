@@ -28,15 +28,15 @@ export const ConfigToComponentForWeb = {
     // link
     // meta
     // base
-    // script 
-    // style 
-    // title 
+    // script
+    // style
+    // title
 
     //...Layout tags
     header: Box,
     // main
     footer: Box,
-    // nav 
+    // nav
     article: Box,
     // aside
     div: Box,
@@ -50,22 +50,22 @@ export const ConfigToComponentForWeb = {
     // thead
     // tbody
     // tfoot
-    // tr 
-    // th 
-    // td 
+    // tr
+    // th
+    // td
 
     //... Form tags
     form: FormControl,
     input: Input,
-    // label 
-    // textarea 
-    // select 
-    // button 
-    // datalist 
-    // fieldset 
-    // legend 
+    // label
+    // textarea
+    // select
+    // button
+    // datalist
+    // fieldset
+    // legend
 
-    //...Text tags   
+    //...Text tags
     p: Text,
     h1: Text,
     h2: Text,
@@ -89,12 +89,12 @@ export const ConfigToComponentForWeb = {
     //wbr
 
     //... List tag
-    // ul 
-    // ol 
-    // li 
-    // dl 
-    // dt 
-    // dd 
+    // ul
+    // ol
+    // li
+    // dl
+    // dt
+    // dd
 
     //...Media tags
     //audio

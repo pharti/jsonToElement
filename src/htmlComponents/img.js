@@ -20,12 +20,12 @@ export const getImgConfig = (config) => {
         } else if (key === 'styles') {
             //... native base accepts style prop for styling
             //... Note styles used double braces.. But object doesn't accept double braces as value.
-            defaultImgConfig['attributes'] = { ...defaultImgConfig['attributes'], ...config[key] };
-            defaultImgConfig.style = { ...config.styles }
+            defaultImgConfig.attributes = { ...defaultImgConfig.attributes, ...config[key] };
+            defaultImgConfig.style = { ...config.styles };
         } else {
             defaultImgConfig[key] = config[key];
         }
     });
     return defaultImgConfig;
 
-}
+};
